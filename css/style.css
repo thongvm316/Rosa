@@ -72,7 +72,7 @@ header .nav .nav-list {
   position: fixed;
   top: 0;
   left: 0;
-  width: 80%;
+  width: 40%;
   height: 100vh;
   background: #252525;
   padding: 4.4rem;
@@ -136,6 +136,32 @@ header .nav:before {
   border: 0.6rem solid transparent;
 }
 
+.discover-our-story .sub-headline, .hero .sub-headline {
+  font-size: 8.5rem;
+  font-family: "Herr Von Muellerhoff", cursive;
+  color: #c59d5f;
+  font-weight: 100;
+  line-height: 0.4;
+  letter-spacing: 2px;
+}
+.discover-our-story .sub-headline .first-letter, .hero .sub-headline .first-letter {
+  text-transform: uppercase;
+  font-size: 10.3rem;
+}
+
+.discover-our-story .global-headline .asterisk, .hero .separator .asterisk {
+  font-size: 1.2rem;
+  color: #c59d5f;
+  margin: 0 1.6rem;
+}
+
+.discover-our-story .restaurant-info .restaurant-description .btn, .hero .btn {
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-right: -2px;
+}
+
 .hero {
   width: 100%;
   height: 100vh;
@@ -144,18 +170,6 @@ header .nav:before {
   display: flex;
   align-items: center;
   text-align: center;
-}
-.hero .sub-headline {
-  font-size: 8.5rem;
-  font-family: "Herr Von Muellerhoff", cursive;
-  color: #c59d5f;
-  font-weight: 100;
-  line-height: 0.4;
-  letter-spacing: 2px;
-}
-.hero .sub-headline .first-letter {
-  text-transform: uppercase;
-  font-size: 10.3rem;
 }
 .hero .headline {
   color: #fff;
@@ -185,6 +199,78 @@ header .nav:before {
 .hero .separator .line-left:before {
   border-left-color: #fff;
   left: 0;
+}
+.hero .headline-description h5 {
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 100;
+  text-transform: uppercase;
+  margin-bottom: 1.2rem;
+  letter-spacing: 3px;
+  margin-right: -3px;
+}
+.hero .cta-btn {
+  font-size: 1.1rem;
+  background-color: #fff;
+  padding: 0.9rem 1.8rem;
+  color: #515151;
+  border-radius: 0.4rem;
+  transition: background-color 0.5s;
+}
+.hero .cta-btn:hover, .hero .cta-btn:focus {
+  color: #fff;
+  background-color: #c59d5f;
+}
+
+/* Discover Story */
+.discover-our-story .sub-headline {
+  letter-spacing: -1px;
+  line-height: 0.42;
+}
+.discover-our-story .global-headline {
+  text-align: center;
+  margin-top: 3.9rem;
+}
+.discover-our-story .global-headline .asterisk {
+  color: #515151;
+  margin-top: 2.4rem 0;
+}
+.discover-our-story .global-headline .headline-dark {
+  color: #252525;
+  letter-spacing: 0.7rem;
+  margin-right: -0.7rem;
+}
+.discover-our-story .restaurant-info {
+  text-align: center;
+}
+.discover-our-story .restaurant-info .restaurant-description {
+  margin-bottom: 3rem;
+}
+.discover-our-story .restaurant-info .restaurant-description p {
+  line-height: 1.6;
+  margin-bottom: 2.4rem;
+}
+.discover-our-story .restaurant-info .restaurant-description .body-btn {
+  font-size: 1.5rem;
+  color: #c59d5f;
+  position: relative;
+  transition: color 0.5s;
+}
+.discover-our-story .restaurant-info .restaurant-description .body-btn:before {
+  content: "";
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  background-color: #c59d5f;
+  transition: 0.5s;
+}
+.discover-our-story .restaurant-info .restaurant-description .body-btn:hover, .discover-our-story .restaurant-info .restaurant-description .body-btn:focus {
+  color: #252525;
+}
+.discover-our-story .restaurant-info .restaurant-description .body-btn:hover:before {
+  color: #252525 !important;
 }
 
 /*# sourceMappingURL=style.css.map */
