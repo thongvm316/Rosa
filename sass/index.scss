@@ -146,7 +146,7 @@ header {
 }
 
 // Extend for sub-headline
-%extend-SubHeadline {
+%SubHeadline {
     font-size: 8.5rem;
     font-family: $secondary-font;
     color: $secondary-font-color;
@@ -157,6 +157,17 @@ header {
         text-transform: uppercase;
         font-size: 10.3rem;
     }
+}
+
+// Extend for heading
+%headline {
+    color: #fff;
+    font-size: 3.7rem;
+    font-family: $main-font;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: .5rem;
+    margin-right: -.5rem;
 }
 
 // Extend for asterisk
@@ -184,17 +195,11 @@ header {
     text-align: center;
 
 .sub-headline {
-    @extend %extend-SubHeadline;
+    @extend %SubHeadline;
 }
 
     .headline {
-        color: #fff;
-        font-size: 3.7rem;
-        font-family: $main-font;
-        text-transform: uppercase;
-        font-weight: 900;
-        letter-spacing: .5rem;
-        margin-right: -.5rem;
+       @extend %headline
     }
 
     .separator {
@@ -258,7 +263,7 @@ header {
 /* Discover Story */
 .discover-our-story {
     .sub-headline {
-        @extend %extend-SubHeadline;
+        @extend %SubHeadline;
         letter-spacing: -1px;
         line-height: .42;
     }
@@ -268,12 +273,11 @@ header {
         .asterisk {
             @extend %asterisk;
             color: $body-font-color;
-            margin-top: 2.4rem 0;
+            margin: 2.4rem 0;
         }
         .headline-dark {
-            color: $main-font-color-dark;
-            letter-spacing: .7rem;
-            margin-right: -.7rem;
+             @extend %headline;
+             color: black;
         }
     }
     .restaurant-info {
@@ -305,7 +309,7 @@ header {
                 &:hover, &:focus {
                     color: $main-font-color-dark;
                 }
-                &:hover:before {
+                &:hover:before, &:focus:before {
                     color: $main-font-color-dark !important;
                 }
             }
@@ -313,6 +317,47 @@ header {
     }
 }
 
+/* Tasteful */
+// %extend-SubHeadline
+.tasteful-recipes {
+    background:  url('../img/tasteful-recipes.jpg') no-repeat center;
+    background-size: cover;
+    .sub-headline {
+        @extend %SubHeadline;
+    }
+    .headline {
+         @extend %headline
+    }
+}
+
+.between {
+    min-height: 65vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+/// hoac can giua cach nay
+// .global-headline {
+//     min-height: 65vh;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     justify-content: center;
+// }
+
+
+/* Discover Menu */
+.discover-our-menu {
+    .sub-headline {
+        @extend %SubHeadline;
+    }
+    .headline {
+         @extend %headline;
+         color: #252525;
+        //  margin-right: 3rem;
+    }
+}
 
 
 
