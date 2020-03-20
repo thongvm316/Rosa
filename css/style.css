@@ -136,7 +136,7 @@ header .nav:before {
   border: 0.6rem solid transparent;
 }
 
-.discover-our-menu .sub-headline, .tasteful-recipes .sub-headline, .discover-our-story .sub-headline, .hero .sub-headline {
+.culinary-delight .sub-headline, .perfect-blend .sub-headline, .discover-our-menu .sub-headline, .tasteful-recipes .sub-headline, .discover-our-story .sub-headline, .hero .sub-headline {
   font-size: 8.5rem;
   font-family: "Herr Von Muellerhoff", cursive;
   color: #c59d5f;
@@ -144,12 +144,12 @@ header .nav:before {
   line-height: 0.4;
   letter-spacing: 2px;
 }
-.discover-our-menu .sub-headline .first-letter, .tasteful-recipes .sub-headline .first-letter, .discover-our-story .sub-headline .first-letter, .hero .sub-headline .first-letter {
+.culinary-delight .sub-headline .first-letter, .perfect-blend .sub-headline .first-letter, .discover-our-menu .sub-headline .first-letter, .tasteful-recipes .sub-headline .first-letter, .discover-our-story .sub-headline .first-letter, .hero .sub-headline .first-letter {
   text-transform: uppercase;
   font-size: 10.3rem;
 }
 
-.discover-our-menu .headline, .tasteful-recipes .headline, .discover-our-story .global-headline .headline-dark, .hero .headline {
+.culinary-delight .headline, .perfect-blend .headline, .discover-our-menu .headline, .tasteful-recipes .headline, .discover-our-story .global-headline .headline-dark, .hero .headline {
   color: #fff;
   font-size: 3.7rem;
   font-family: "Source Sans Pro", sans-serif;
@@ -159,13 +159,13 @@ header .nav:before {
   margin-right: -0.5rem;
 }
 
-.discover-our-story .global-headline .asterisk, .hero .separator .asterisk {
+.culinary-delight .asterisk, .discover-our-story .global-headline .asterisk, .hero .separator .asterisk {
   font-size: 1.2rem;
   color: #c59d5f;
   margin: 0 1.6rem;
 }
 
-.discover-our-story .restaurant-info .restaurant-description .btn, .hero .btn {
+.discover-our-menu .btn, .discover-our-story .restaurant-info .restaurant-description .btn, .hero .btn {
   display: inline-block;
   text-transform: uppercase;
   letter-spacing: 3px;
@@ -224,6 +224,29 @@ header .nav:before {
 }
 
 /* Discover Story */
+.culinary-delight .body-btn, .discover-our-menu .body-btn, .discover-our-story .restaurant-info .restaurant-description .body-btn {
+  font-size: 1.5rem;
+  color: #c59d5f;
+  position: relative;
+  transition: color 0.5s;
+}
+.culinary-delight .body-btn:before, .discover-our-menu .body-btn:before, .discover-our-story .restaurant-info .restaurant-description .body-btn:before {
+  content: "";
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  background-color: #c59d5f;
+  transition: 0.5s;
+}
+.culinary-delight .body-btn:hover, .discover-our-menu .body-btn:hover, .discover-our-story .restaurant-info .restaurant-description .body-btn:hover, .culinary-delight .body-btn:focus, .discover-our-menu .body-btn:focus, .discover-our-story .restaurant-info .restaurant-description .body-btn:focus {
+  color: #252525;
+}
+.culinary-delight .body-btn:hover:before, .discover-our-menu .body-btn:hover:before, .discover-our-story .restaurant-info .restaurant-description .body-btn:hover:before, .culinary-delight .body-btn:focus:before, .discover-our-menu .body-btn:focus:before, .discover-our-story .restaurant-info .restaurant-description .body-btn:focus:before {
+  color: #252525 !important;
+}
+
 .discover-our-story .sub-headline {
   letter-spacing: -1px;
   line-height: 0.42;
@@ -249,29 +272,6 @@ header .nav:before {
   line-height: 1.6;
   margin-bottom: 2.4rem;
 }
-.discover-our-story .restaurant-info .restaurant-description .body-btn {
-  font-size: 1.5rem;
-  color: #c59d5f;
-  position: relative;
-  transition: color 0.5s;
-}
-.discover-our-story .restaurant-info .restaurant-description .body-btn:before {
-  content: "";
-  width: 100%;
-  height: 2px;
-  position: absolute;
-  left: 0;
-  bottom: -3px;
-  background-color: #c59d5f;
-  transition: 0.5s;
-}
-.discover-our-story .restaurant-info .restaurant-description .body-btn:hover, .discover-our-story .restaurant-info .restaurant-description .body-btn:focus {
-  color: #252525;
-}
-.discover-our-story .restaurant-info .restaurant-description .body-btn:hover:before, .discover-our-story .restaurant-info .restaurant-description .body-btn:focus:before {
-  color: #252525 !important;
-}
-
 /* Tasteful */
 .tasteful-recipes {
   background: url("../img/tasteful-recipes.jpg") no-repeat center;
@@ -286,8 +286,65 @@ header .nav:before {
 }
 
 /* Discover Menu */
+.culinary-delight .image-group, .discover-our-menu .image-group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1.5rem;
+}
+
+.discover-our-menu {
+  text-align: center;
+}
+.discover-our-menu .sub-headline {
+  letter-spacing: -1px;
+  line-height: 0.42;
+}
 .discover-our-menu .headline {
   color: #252525;
+}
+.discover-our-menu .global-headline {
+  margin-top: 7.9rem;
+}
+.discover-our-menu p {
+  margin-bottom: 2.4rem;
+}
+/* The perfect blend */
+.perfect-blend {
+  background: url("../img/perfect-blend.jpg") center no-repeat;
+  background-size: cover;
+  text-align: center;
+}
+.perfect-blend .sub-headline {
+  letter-spacing: -1px;
+  line-height: 0.42;
+}
+.perfect-blend .global-headline {
+  margin-top: 7.9rem;
+}
+
+/* Culinary-Delight */
+.culinary-delight {
+  text-align: center;
+}
+.culinary-delight .global-headline {
+  margin-top: 3.9rem;
+}
+.culinary-delight .sub-headline {
+  letter-spacing: -1px;
+  line-height: 0.42;
+}
+.culinary-delight .headline {
+  color: #252525;
+}
+.culinary-delight .asterisk {
+  color: #515151;
+  margin: 2.4rem 0;
+}
+.culinary-delight .restaurant-description {
+  margin-bottom: 3.9rem;
+}
+.culinary-delight .restaurant-description p {
+  margin-bottom: 2.4rem;
 }
 
 /*# sourceMappingURL=style.css.map */

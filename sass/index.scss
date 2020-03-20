@@ -261,6 +261,29 @@ header {
 }
 
 /* Discover Story */
+// extend for btn-body
+%btn-body{
+    font-size: 1.5rem;
+    color: $secondary-font-color;
+    position: relative;
+    transition: color .5s;
+    &:before {
+        content: '';
+        width: 100%;
+        height: 2px;
+        position: absolute;
+        left: 0;
+        bottom: -3px;
+        background-color: $secondary-font-color;
+        transition: .5s;
+    }
+    &:hover, &:focus {
+        color: $main-font-color-dark;
+    }
+    &:hover:before, &:focus:before {
+        color: $main-font-color-dark !important;
+    }
+}
 .discover-our-story {
     .sub-headline {
         @extend %SubHeadline;
@@ -292,26 +315,7 @@ header {
                 @extend %btn;
             }
             .body-btn {
-                font-size: 1.5rem;
-                color: $secondary-font-color;
-                position: relative;
-                transition: color .5s;
-                &:before {
-                    content: '';
-                    width: 100%;
-                    height: 2px;
-                    position: absolute;
-                    left: 0;
-                    bottom: -3px;
-                    background-color: $secondary-font-color;
-                    transition: .5s;
-                }
-                &:hover, &:focus {
-                    color: $main-font-color-dark;
-                }
-                &:hover:before, &:focus:before {
-                    color: $main-font-color-dark !important;
-                }
+                @extend %btn-body;
             }
         }
     }
@@ -348,17 +352,92 @@ header {
 
 
 /* Discover Menu */
+// extend image-group
+%image-group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1.5rem;
+}
 .discover-our-menu {
+    text-align: center;
     .sub-headline {
         @extend %SubHeadline;
+        letter-spacing: -1px;
+        line-height: .42;
     }
     .headline {
          @extend %headline;
          color: #252525;
         //  margin-right: 3rem;
     }
+    .global-headline {
+        margin-top: 7.9rem;
+    }
+    .btn {
+        @extend %btn;
+    }
+    .body-btn {
+        @extend %btn-body;
+    }
+    p {
+        margin-bottom: 2.4rem;
+    }
+    .image-group {
+        @extend %image-group;
+    }
 }
 
+/* The perfect blend */
+.perfect-blend {
+    background: url('../img/perfect-blend.jpg') center no-repeat;
+    background-size: cover;
+    text-align: center;
+    .sub-headline {
+        @extend %SubHeadline;
+        letter-spacing: -1px;
+        line-height: .42;
+    }
+    .headline {
+         @extend %headline;
+    }
+    .global-headline {
+        margin-top: 7.9rem;
+    }
+}
+
+/* Culinary-Delight */
+.culinary-delight {
+    text-align: center;
+    .global-headline {
+        margin-top: 3.9rem;
+    }
+    .sub-headline {
+        @extend %SubHeadline;
+        letter-spacing: -1px;
+        line-height: .42;
+    }
+    .headline {
+         @extend %headline;
+         color: #252525;
+    }
+    .asterisk {
+        @extend %asterisk;
+        color: $body-font-color;
+        margin: 2.4rem 0;
+    }
+    .body-btn {
+        @extend %btn-body;
+    }
+    .restaurant-description {
+        margin-bottom: 3.9rem;
+        p {
+            margin-bottom: 2.4rem;
+        }
+    }
+    .image-group {
+        @extend %image-group;
+    }
+}
 
 
 
