@@ -159,7 +159,7 @@ header .nav:before {
   margin-right: -0.5rem;
 }
 
-.culinary-delight .asterisk, .discover-our-story .global-headline .asterisk, .hero .separator .asterisk {
+footer .footer-content .asterisk, .culinary-delight .asterisk, .discover-our-story .global-headline .asterisk, .hero .separator .asterisk {
   font-size: 1.2rem;
   color: #c59d5f;
   margin: 0 1.6rem;
@@ -345,6 +345,118 @@ header .nav:before {
 }
 .culinary-delight .restaurant-description p {
   margin-bottom: 2.4rem;
+}
+/* Footer */
+footer {
+  padding: 7.9rem !important;
+  background-color: #121212;
+  color: #fff;
+  text-align: center;
+  position: relative;
+}
+footer .back-to-top {
+  width: 7rem;
+  height: 7rem;
+  background-color: #121212;
+  position: absolute;
+  top: -3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+}
+footer .back-to-top i {
+  display: block;
+  color: #fff;
+  font-size: 2rem;
+  padding: 2rem;
+}
+footer .footer-content {
+  overflow: hidden;
+}
+footer .footer-content .asterisk {
+  margin: 2.4rem 0;
+}
+footer .footer-content h4 {
+  font-size: 1.9rem;
+  text-transform: uppercase;
+  font-weight: 100;
+  letter-spacing: 3px;
+  margin-bottom: 3rem;
+}
+footer .footer-content .footer-content-about {
+  margin-bottom: 5.4rem;
+}
+footer .footer-content .footer-content-about p {
+  line-height: 2;
+}
+footer .footer-content .social-icon {
+  list-style: none;
+  margin-bottom: 5.4rem;
+  display: flex;
+  justify-content: center;
+}
+footer .footer-content .social-icon i {
+  font-size: 2rem;
+  color: #fff;
+  padding: 0.8rem 2rem;
+  opacity: 0.5;
+  transition: color 0.5s;
+}
+footer .footer-content .social-icon i:hover {
+  color: #c59d5f;
+}
+footer .newsletter-from {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+footer .newsletter-from .newsletter-input {
+  width: 100%;
+  max-width: 25rem;
+  padding: 1rem;
+  border-radius: 0.4rem;
+}
+footer .newsletter-from .newsletter-btn {
+  background-color: transparent;
+  border: none;
+  color: #252525;
+  font-size: 1.6rem;
+  padding: 1px 0.6rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 10.5rem;
+  cursor: pointer;
+}
+
+/* Media queries */
+@media (min-width: 900px) {
+  section {
+    padding: 7.9rem;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+
+  header .nav {
+    justify-content: space-between !important;
+  }
+  header .nav .nav-list {
+    position: initial;
+    width: initial;
+    height: initial;
+    background-color: transparent;
+    padding: 0;
+    justify-content: initial;
+    flex-direction: row;
+    transform: initial;
+  }
+  header .nav .nav-list .nav-item {
+    margin: 0 2.4rem;
+    border: none;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
