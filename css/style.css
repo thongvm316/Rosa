@@ -72,7 +72,7 @@ header .nav .nav-list {
   position: fixed;
   top: 0;
   left: 0;
-  width: 40%;
+  width: 45%;
   height: 100vh;
   background: #252525;
   padding: 4.4rem;
@@ -370,9 +370,6 @@ footer .back-to-top i {
   font-size: 2rem;
   padding: 2rem;
 }
-footer .footer-content {
-  overflow: hidden;
-}
 footer .footer-content .asterisk {
   margin: 2.4rem 0;
 }
@@ -456,6 +453,72 @@ footer .newsletter-from .newsletter-btn {
   header .nav .nav-list .nav-item {
     margin: 0 2.4rem;
     border: none;
+  }
+  header .nav .nav-list .nav-item .nav-link {
+    font-size: 1.3rem;
+  }
+
+  .active {
+    position: relative;
+  }
+  .active:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    left: 0;
+    bottom: -3px;
+  }
+
+  .discover-our-story .restaurant-info {
+    display: flex;
+    align-items: center;
+  }
+  .discover-our-story .restaurant-info > div {
+    flex: 1;
+  }
+  .discover-our-story .restaurant-info .padding-right {
+    padding-right: 7rem;
+  }
+
+  footer .footer-content {
+    max-width: 77.5rem !important;
+    margin: auto !important;
+  }
+  footer .footer-content .footer-content-about {
+    max-width: 51.3rem;
+    margin: 0 auto 5.4rem;
+  }
+  footer .footer-content .footer-content-divider {
+    display: flex;
+    justify-content: space-between;
+  }
+  footer .footer-content .footer-content-divider .social-media, footer .footer-content .footer-content-divider .newsletter-container {
+    width: 100%;
+    max-width: 27.3rem;
+    margin: 0 1rem;
+  }
+}
+@media (max-width: 576px) {
+  header .nav .nav-list {
+    transform: translateX(-150%);
+    width: 57%;
+  }
+
+  footer .footer-content .footer-content-divider .social-media {
+    width: 100%;
+  }
+  footer .footer-content .newsletter-from .newsletter-btn {
+    margin-left: 9rem;
+  }
+}
+@media (max-width: 320px) {
+  footer .footer-content .newsletter-from .newsletter-btn {
+    margin-left: 6rem;
+  }
+  footer .footer-content .newsletter-from ::placeholder {
+    font-size: 1rem;
   }
 }
 
