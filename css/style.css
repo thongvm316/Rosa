@@ -15,8 +15,13 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 section {
   padding: 3.9rem 0;
+  overflow: hidden;
 }
 
 img {
@@ -181,6 +186,19 @@ footer .footer-content .asterisk, .culinary-delight .asterisk, .discover-our-sto
   align-items: center;
   text-align: center;
 }
+.hero .sub-headline {
+  opacity: 0;
+  animation: fadeUp 0.5s forwards;
+  animation-delay: 0.5s;
+}
+.hero .headline {
+  animation: scale 0.5s forwards;
+}
+.hero .single-animation {
+  opacity: 0;
+  animation: fadeDown 0.5s forwards;
+  animation-delay: 1.5s;
+}
 .hero .separator {
   display: flex;
   align-items: center;
@@ -192,6 +210,9 @@ footer .footer-content .asterisk, .culinary-delight .asterisk, .discover-our-sto
   height: 0.25rem;
   background-color: #fff;
   position: relative;
+  opacity: 0;
+  animation: grow 2s forwards;
+  animation-delay: 0.9s;
 }
 .hero .separator .line-right:before {
   border-right-color: #fff;
@@ -200,6 +221,10 @@ footer .footer-content .asterisk, .culinary-delight .asterisk, .discover-our-sto
 .hero .separator .line-left:before {
   border-left-color: #fff;
   left: 0;
+}
+.hero .separator .asterisk {
+  animation: spin 0.5s forwards;
+  animation-delay: 0.7s;
 }
 .hero .headline-description h5 {
   color: #fff;
@@ -369,6 +394,7 @@ footer .back-to-top i {
   color: #fff;
   font-size: 2rem;
   padding: 2rem;
+  animation: up 2s infinite;
 }
 footer .footer-content .asterisk {
   margin: 2.4rem 0;
@@ -427,6 +453,64 @@ footer .newsletter-from .newsletter-btn {
   cursor: pointer;
 }
 
+/* Animation */
+@keyframes fadeUp {
+  0% {
+    transform: translateY(4rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0rem);
+  }
+}
+@keyframes scale {
+  0% {
+    transform: scale(2);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes grow {
+  0% {
+    width: 0;
+  }
+  100% {
+    opacity: 1;
+    width: 100%;
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(-360deg);
+  }
+}
+@keyframes fadeDown {
+  0% {
+    transform: translateY(-1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0rem);
+  }
+}
+@keyframes up {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-1rem);
+  }
+}
 /* Media queries */
 @media (min-width: 900px) {
   section {
@@ -485,6 +569,7 @@ footer .newsletter-from .newsletter-btn {
   footer .footer-content {
     max-width: 77.5rem !important;
     margin: auto !important;
+    overflow: hidden;
   }
   footer .footer-content .footer-content-about {
     max-width: 51.3rem;

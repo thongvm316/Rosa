@@ -21,8 +21,11 @@ html {
     scroll-behavior: smooth;
 }
 
+body { overflow-x: hidden; } // dung cho animation scale, do scale(2) zoom to qua nen co thanh cuon ngang, dung style nay to fix
+
 section {
     padding: 3.9rem 0;
+    overflow: hidden;
 }
 
 img {
@@ -179,7 +182,7 @@ header {
 
 // Extedn for btn
 %btn {
-     display: inline-block;
+    display: inline-block;
     text-transform: uppercase;
     letter-spacing: 3px;
     margin-right: -2px;
@@ -196,10 +199,21 @@ header {
 
 .sub-headline {
     @extend %SubHeadline;
+    opacity: 0;
+    animation: fadeUp .5s forwards;
+    animation-delay: .5s;
 }
 
     .headline {
-       @extend %headline
+       @extend %headline;
+       animation: scale .5s forwards;
+        // animation-delay: .5s;
+    }
+
+    .single-animation {
+        opacity: 0;
+        animation: fadeDown .5s forwards;
+        animation-delay: 1.5s;
     }
 
     .separator {
@@ -212,6 +226,9 @@ header {
             height: 0.25rem;
             background-color: #fff;
             position: relative;
+            opacity: 0;
+            animation: grow 2s forwards;
+            animation-delay: .9s;
         }
         .line-right {
             &:before {
@@ -229,6 +246,8 @@ header {
         }
         .asterisk {
             @extend %asterisk;
+            animation: spin .5s forwards;
+            animation-delay: .7s;
         }
     }
 
@@ -460,6 +479,7 @@ footer {
             color: #fff;
             font-size: 2rem;
             padding: 2rem;
+            animation: up 2s infinite; // vong lap, chay hoai
         }
     }
     .footer-content {
@@ -524,6 +544,38 @@ footer {
     }
 }
 
+/* Animation */
+@keyframes fadeUp {
+    0%{ transform: translateY(4rem); }
+    100%{ opacity: 1; transform: translateY(0rem); }
+}
+
+@keyframes scale {
+    0%{ transform: scale(2); }
+    100%{ opacity: 1; transform:  scale(1); }
+}
+
+@keyframes grow {
+    0%{ width: 0; }
+    100%{ opacity: 1; width: 100%; }
+}
+
+@keyframes spin {
+    0%{ transform: rotate(0); }
+    100%{ opacity: 1; transform: rotate(-360deg); }
+}
+
+@keyframes fadeDown {
+    0%{ transform: translateY(-1rem); }
+    100%{ opacity: 1; transform: translateY(0rem); }
+}
+
+@keyframes up {
+    0%{ opacity: 0; }
+    50%{ opacity: 1; }
+    100%{ opacity: 0; transform: translateY(-1rem); }
+}
+
 /* Media queries */
 @media (min-width: 900px) {
     section {
@@ -586,6 +638,7 @@ footer {
         .footer-content {
             max-width: 77.5rem !important;
             margin: auto !important;
+            overflow: hidden;
             .footer-content-about {
                 max-width: 51.3rem;
                 margin: 0 auto 5.4rem;
